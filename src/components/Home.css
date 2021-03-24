@@ -1,0 +1,97 @@
+.mainHome {
+width: 100%
+}
+.mainHeader {
+  text-align: center;
+  margin: 0 !important;
+}
+
+.header {
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.content {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 5px !important;
+}
+.mainContent {
+      padding: 20px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 9px;
+  padding-left: 15px;
+  color: #f9a742;
+  padding-top: 8px;
+}
+
+.description {
+    padding-left: 15px;
+    font-weight: 500;
+    color: #1a129acc;
+    padding-top: 8px;
+}
+
+.date {
+    padding-left: 15px;
+    font-weight: 500;
+    padding-top: 8px;
+    color: #7d4577;
+}
+
+.remains {
+  padding-left: 15px;
+  font-weight: 500;
+  padding-top: 8px;
+}
+
+.high {
+  background-color: #f3ced3;
+}
+
+.low {
+  background-color: #c6f5f0;
+}
+
+.medium {
+  background-color: #ffffc3;
+}
+
+.critical {
+  background-color: #fd5b5b;
+}
+
+.editIcon {
+  float: right;
+  padding-right: 8px;
+  cursor: pointer;
+}
+
+.editContainer {
+  margin: 6px 8px 20px 10px;
+  overflow: hidden !important;
+}
+
+.formElement {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.formElement {
+  padding-top: 15px !important;
+}
+
+.MuiTypography-body1 {
+  width: -webkit-fill-available;
+}
+
+button {
+    margin-top: 15px !important;
+    margin-left: 15px !important;
+    float: right;
+  }

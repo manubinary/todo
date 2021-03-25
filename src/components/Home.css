@@ -78,6 +78,9 @@ width: 100%
   background-color: #fd5b5b;
 }
 
+.expired {
+  background-color: #cccccc !important;
+}
 .editIcon {
   float: right;
   padding-right: 8px;

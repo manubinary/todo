@@ -80,7 +80,7 @@ function ToDo(props) {
 
   const getAlertClass = (date) => {
     const difference = +new Date(date) - +new Date();
-    const alertClass = (difference <= 2700000 && difference > 0) ? 'blink' : '';
+    const alertClass = (difference <= 2700000 && difference > 0) ? 'blink' : difference <= 0 ? 'expired' : '';
     return alertClass;
   };
 

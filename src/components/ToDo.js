@@ -18,6 +18,8 @@ import {Col, Row} from 'react-bootstrap';
 import firebase from "firebase/app";
 import firestore from  "firebase/firestore";
 import {config} from '../config.js'
+import Tooltip from '@material-ui/core/Tooltip';
+
 function ToDo(props) {
 
   const [open, setOpen] = useState(false);
@@ -87,8 +89,8 @@ function ToDo(props) {
   const getEachRow = (doc) => {
     return(
       <div className={"content " + doc.data().priority + " " + getAlertClass(doc.data().date)}>
-        <EditIcon onClick={() => editModalOpen(open, doc.data(), doc.id)} className='iconStyle editIcon'/>
-        <DeleteIcon onClick={() => deleteDoc(doc.id)} className='iconStyle editIcon'/>
+        <Tooltip title={"Update " + doc.data().title}><EditIcon onClick={() => editModalOpen(open, doc.data(), doc.id)} className='iconStyle editIcon'/></Tooltip>
+        <Tooltip title="Delete ToDo"><DeleteIcon onClick={() => deleteDoc(doc.id)} className='iconStyle editIcon'/></Tooltip>
         <div className="title">{doc.data().title}</div>
         <div className="description">{doc.data().content}</div>
         <div className="date">On {moment(doc.data().date).format('MMMM Do YYYY')}</div>
@@ -190,7 +192,13 @@ function ToDo(props) {
 
   return (
     <Col md={12} xs={12} lg={12} sm={12} className="mainHome">
-      <AddCircleIcon onClick={() => setAddModal(true)} className='iconStyle'/>
+      <Tooltip title="Add New ToDo"><AddCircleIcon onClick={() => setAddModal(true)} className='iconStyle createToDo'/></Tooltip>
+      <Row className="contentHeaderRow">
+        <Col md={3} xs={3} lg={3} sm={3}><p className="critical contentHeader">Critical</p></Col>
+        <Col md={3} xs={3} lg={3} sm={3}><p className="high contentHeader">High</p></Col>
+        <Col md={3} xs={3} lg={3} sm={3}><p className="medium contentHeader">Medium</p></Col>
+        <Col md={3} xs={3} lg={3} sm={3}><p className="low contentHeader">Low</p></Col>
+      </Row>
       <Row>
         <Col md={3} xs={3} lg={3} sm={3}>{contentCritical}</Col>
         <Col md={3} xs={3} lg={3} sm={3}>{contentHigh}</Col>

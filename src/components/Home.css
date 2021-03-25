@@ -9,16 +9,19 @@ width: 100%
 .header {
     border: 1px solid #ccc;
     cursor: pointer;
+    background-color: floralwhite !important;
 }
 
 .content {
     border: 1px solid #ccc;
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 20px 5px !important;
+    margin: 12px 5px !important;
 }
 .mainContent {
-      padding: 20px;
+    padding: 20px;
+    background: linear-gradient(100deg , #ff240066, #e6a8a8, #dcc98e, #e1e2a1, #99efa8, #a6edf1, #a9a5e8, #ebaff1, #ecaef3);
+    height: 100%;
 }
 
 .title {
@@ -110,3 +113,21 @@ button {
     margin-left: 15px !important;
     float: right;
   }
+
+  .createToDo {
+    cursor: pointer;
+  }
+
+  label {
+    padding-top: 8px !important;
+  }
+
+  .contentHeader {
+    text-align: center;
+    border-radius: 28px;
+  }
+
+  .contentHeaderRow {
+    padding-top: 15px;
+    height: 36px;
+}

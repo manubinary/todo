@@ -82,7 +82,7 @@ function ToDo(props) {
 
   const getAlertClass = (date) => {
     const difference = +new Date(date) - +new Date();
-    const alertClass = (difference <= 2700000 && difference > 0) ? 'blink' : difference <= 0 ? 'expired' : '';
+    const alertClass = (difference <= 1800000 && difference > 0) ? 'blink' : difference <= 0 ? 'expired' : '';
     return alertClass;
   };
 
@@ -90,7 +90,7 @@ function ToDo(props) {
     return(
       <div className={"content " + doc.data().priority + " " + getAlertClass(doc.data().date)}>
         <Tooltip title={"Update " + doc.data().title}><EditIcon onClick={() => editModalOpen(open, doc.data(), doc.id)} className='iconStyle editIcon'/></Tooltip>
-        <Tooltip title="Delete ToDo"><DeleteIcon onClick={() => deleteDoc(doc.id)} className='iconStyle editIcon'/></Tooltip>
+        <Tooltip title={"Delete " + doc.data().title}><DeleteIcon onClick={() => deleteDoc(doc.id)} className='iconStyle editIcon'/></Tooltip>
         <div className="title">{doc.data().title}</div>
         <div className="description">{doc.data().content}</div>
         <div className="date">On {moment(doc.data().date).format('MMMM Do YYYY')}</div>

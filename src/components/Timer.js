@@ -41,9 +41,9 @@ function calculate () {
 }
 
   const calculateTimeLeft = () => {
-    // const difference = +new Date(props.date) - +new Date();
-    // const className = (difference <= 5400000) ? 'blink' : ''; class={className}
-    return (<div>
+    const difference = +new Date(props.date) - +new Date();
+    const className = (difference <= 1800000) ? 'blink' : '';
+    return (<div class={className}>
       {timerComponents.length ? timerComponents : <span>Expired!</span>}
     </div>);
   }

@@ -31,6 +31,7 @@ function calculate () {
 
   if (difference > 0) {
     timeLeft = {
+      In: ' ',
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
       minutes: Math.floor((difference / 1000 / 60) % 60),

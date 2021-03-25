@@ -10,7 +10,7 @@ function Home() {
       <div className="mainHome">
         <Row className="mainHeader">
           <Col className="header">
-            <h1>ToDo List</h1>
+            <h1>To-Do List</h1>
           </Col>
         </Row>
         <div className="mainContent">

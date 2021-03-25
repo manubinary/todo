@@ -1,17 +1,18 @@
 import React, {useState,useEffect} from 'react';
+import './Home.css';
 
 function Timer(props) {
 
   const [timeLeft, setTimeLeft] = useState(calculate());
-useEffect(() => {
-  const id = setTimeout(() => {
-    setTimeLeft(calculate());
-  }, 1000);
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setTimeLeft(calculate());
+    }, 1000);
 
-  return () => {
-    clearTimeout(id);
-  };
-});
+    return () => {
+      clearTimeout(id);
+    };
+  });
 
 const timerComponents = Object.keys(timeLeft).map(interval => {
   if (!timeLeft[interval]) {
@@ -39,8 +40,9 @@ function calculate () {
   return timeLeft;
 }
 
-
   const calculateTimeLeft = () => {
+    // const difference = +new Date(props.date) - +new Date();
+    // const className = (difference <= 5400000) ? 'blink' : ''; class={className}
     return (<div>
       {timerComponents.length ? timerComponents : <span>Expired!</span>}
     </div>);

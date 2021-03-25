@@ -1,3 +1,10 @@
+#About
+Simple todo App
+Data stored in firebase
+user can create todo list with priority
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
